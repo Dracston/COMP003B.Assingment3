@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 namespace COMP003B.Assingment3.Models
 {
-    public class GroceryModel
+    public class Grocery
     {
         [Required]
         public int PLU {  get; set; }
