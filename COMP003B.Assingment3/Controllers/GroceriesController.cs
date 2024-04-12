@@ -114,7 +114,7 @@ namespace COMP003B.Assingment3.Controllers
         //Post: Grocery/Delete/(plu)
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirm(int plu)
+        public IActionResult DeleteConfirmed(int plu)
         { 
             //Look for product
             var grocery = _groceries.FirstOrDefault(g=> g.PLU == plu);
