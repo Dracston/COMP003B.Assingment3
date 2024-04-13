@@ -91,7 +91,7 @@ namespace COMP003B.Assingment3.Controllers
             return View(grocery);
         }
 
-        //Get:Groceries/Delete/(PLU)
+        //Get:Groceries/Delete/5
         [HttpGet]
         public IActionResult Delete(int? plu)
         {
@@ -111,7 +111,7 @@ namespace COMP003B.Assingment3.Controllers
             return View(grocery);
         }
 
-        //Post: Grocery/Delete/(plu)
+        //Post: Grocery/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int plu)
@@ -119,9 +119,9 @@ namespace COMP003B.Assingment3.Controllers
             //Look for product
             var grocery = _groceries.FirstOrDefault(g=> g.PLU == plu);
             //When product PLU if matched
-            if(grocery!= null)
+            if(grocery != null)
             {
-                //Remove
+                 //Remove
                 _groceries.Remove(grocery);
             }
             return RedirectToAction(nameof(Index));
